@@ -1,0 +1,252 @@
+/* Global styles for the entire page */
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+}
+
+/* Styling for the navbar brand */
+.navbar-brand {
+    width: 100%;
+    height: 120px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+/* Styling for the logo inside the navbar brand */
+.navbar-brand img {
+    height: 100%;
+    margin-right: 10px;
+}
+
+/* Adjust the spacing between links in the navbar */
+.nav-item {
+    display: inline-block;
+}
+
+/* Styling for the links in the navbar */
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+/* Styling for the active link in the navbar */
+.nav-link.active {
+    background-color: #333;
+}
+
+/* Global heading styles */
+h1, h2 {
+    text-align: center;
+}
+
+/* Animation styles for the deal text */
+.deal-text {
+    font-size: 28px;
+    font-weight: bold;
+    animation: pulse 1s infinite alternate, color-change 5s infinite alternate;
+}
+
+/* Keyframes for the pulse animation */
+@keyframes pulse {
+    from {
+        font-size: 28px;
+    }
+    to {
+        font-size: 38px;
+    }
+}
+
+/* Keyframes for the color-change animation */
+@keyframes color-change {
+    0% {
+        color: green;
+    }
+    25% {
+        color: blue;
+    }
+    50% {
+        color: orange;
+    }
+    75% {
+        color: purple;
+    }
+    100% {
+        color: red;
+    }
+}
+
+/* Styling for links */
+a {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+    text-decoration: none; /* Remove underline for links */
+}
+
+/* Styling for the variety heading */
+.variety {
+    font-size: 50px;
+    font-style: italic;
+    color: #45a049;
+}
+
+/* Styling for images */
+img {
+    max-width: 350px;
+    height: auto;
+    transition: transform 1s; /* Add smooth transition on image transform */
+}
+
+/* Group pizza items into rows of three */
+.pizza-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Styling for the background image */
+.bg-img {
+    height: 500px;
+    width: 100%;
+    background-image: url("./hd_pizza.png");
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 50px;
+    color: brown;
+    text-align: center;
+}
+
+/* Styling for a row of pizza items */
+.pizza-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+/* Styling for each pizza item */
+.pizza-item {
+    width: calc(33.33% - 10px); /* Adjust the width to fit three items in a row with a gap of 20px */
+}
+
+/* Enlarge image on hover */
+.pizza-item img:hover {
+    transform: scale(1.1); /* Increase scale on hover to enlarge the image */
+}
+
+/* Add styles for image captions */
+figcaption {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+/* Styling for the pizza name in the image caption */
+.pizza-name {
+    font-size: 1.2rem;
+}
+
+/* Styling for the pizza price in the image caption */
+.pizza-price {
+    font-size: 1rem;
+    color: green;
+}
+
+/* Styling for the enlarged image */
+.enlarged-image {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+}
+
+/* Form styling */
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column; /* Change the flex direction to column */
+}
+
+/* Styling for form labels, inputs, and selects */
+form label,
+form input,
+form select {
+    margin: 5px 0; /* Reduce the margin between form elements */
+}
+
+/* Styling for form labels */
+form label {
+    font-weight: bold;
+}
+
+/* Styling for form input fields */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"],
+form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styling for the submit button */
+form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Styling for the submit button on hover */
+form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Styling for the side options (checkboxes) */
+.side-options {
+    display: inline-block;
+    justify-content: space-between; /* Add space between checkboxes */
+    margin-top: 5px;
+}
+
+/* Styling for the coupon option (radio buttons) */
+.coupon-option {
+    display: block;
+    justify-content: space-between; /* Add space between radio buttons */
+}
+
+/* Styling for form headings */
+form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Styling for paragraphs */
+p {
+    margin: 5px 0;
+}
+
+/* Styling for bold text */
+span {
+    font-weight: bold;
+}

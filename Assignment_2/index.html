@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dattu's Pizza</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv@kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        Give a review and get a free small fries
+    </header>
+    
+    <!-- Navigation Section -->
+    <nav class="datt_pizza">
+        <div class="navbar-brand">
+            <img src="./artbreeder-image.png" alt="header logo">
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link active">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link active">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link active">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+        </div> 
+    </nav>   
+
+    <!-- Pizza Container Section -->
+    <div class="pizza-container">
+        <!-- Background Image Section -->
+        <div class="bg-img">
+            <h1 class="deal-text">Hurry! Get any three dips free with your pizza</h1>
+        </div>
+        
+        <!-- Heading Section -->
+        <h1 class="variety">Explore the varieties of pizza available at our platform ...........</h1>
+        
+        <!-- First Row of Pizzas -->
+        <div class="pizza-row">
+            <div class="pizza-item">
+                <!-- Link to Cheese Pizza -->
+                <a href="form.html?pizza=cheese">
+                  <figure>
+                    <!-- Image of Cheese Pizza -->
+                    <img src="./new_cheese.jpg" alt="Cheese Pizza">
+                    <!-- Caption for Cheese Pizza -->
+                    <figcaption>
+                      <span class="pizza-name">CHEESE PIZZA</span>
+                      <span class="pizza-price">$9.99</span>
+                    </figcaption>
+                  </figure>
+                </a>
+            </div>
+          
+            <div class="pizza-item">
+                <!-- Link to Veggie Pizza -->
+                <a href="form.html?pizza=veggie">
+                  <figure>
+                    <!-- Image of Veggie Pizza -->
+                    <img src="./veggie_pizza.jpg" alt="Veggie Pizza">
+                    <!-- Caption for Veggie Pizza -->
+                    <figcaption>
+                      <span class="pizza-name">VEGGIE PIZZA</span>
+                      <span class="pizza-price">$10.99</span>
+                    </figcaption>
+                  </figure>
+                </a>
+            </div>
+            
+            <div class="pizza-item">
+                <!-- Link to Pineapple Pizza -->
+                <a href="form.html?pizza=pineapple">
+                  <figure>
+                    <!-- Image of Pineapple Pizza -->
+                    <img src="./pineapple_pizza(new).jpg" alt="Pineapple Pizza">
+                    <!-- Caption for Pineapple Pizza -->
+                    <figcaption>
+                      <span class="pizza-name">PINEAPPLE PIZZA</span>
+                      <span class="pizza-price">$11.99</span>
+                    </figcaption>
+                  </figure>
+                </a>
+            </div>
+        </div>
+
+        <!-- Second Row of Pizzas -->
+        <div class="pizza-row">
+            <div class="pizza-item">
+                <!-- Link to Pepperoni Pizza -->
+                <a href="form.html?pizza=cheese">
+                  <figure>
+                    <!-- Image of Pepperoni Pizza -->
+                    <img src="./new_pepperoni.jpg" alt="Pepperoni Pizza">
+                    <!-- Caption for Pepperoni Pizza -->
+                    <figcaption>
+                      <span class="pizza-name">Pepperoni PIZZA</span>
+                      <span class="pizza-price">$9.99</span>
+                    </figcaption>
+                  </figure>
+                </a>
+            </div>
+            
+            <div class="pizza-item">
+                <!-- Link to MeatSupreme Pizza -->
+                <a href="form.html?pizza=veggie">
+                  <figure>
+                    <!-- Image of MeatSupreme Pizza -->
+                    <img src="./new_meatsupreme.jpg" alt="MeatSupreme Pizza" onclick="showEnlargedPizza('./veggie_pizza.jpg')">
+                    <!-- Caption for MeatSupreme Pizza -->
+                    <figcaption>
+                      <span class="pizza-name">MeatSupreme PIZZA</span>
+                      <span class="pizza-price">$10.99</span>
+                    </figcaption>
+                  </figure>
+                </a>
+            </div>
+            
+            <div class="pizza-item">
+                <!-- Link to Hawaiian Pizza -->
+                <a href="form.html?pizza=pineapple">
+                  <figure>
+                    <!-- Image of Hawaiian Pizza -->
+                    <img src="./hawaiian_pizza.jpg" alt="Hawaiian Pizza">
+                    <!-- Caption for Hawaiian Pizza -->
+                    <figcaption>
+                      <span class="pizza-name">Hawaiian PIZZA</span>
+                      <span class="pizza-price">$11.99</span>
+                    </figcaption>
+                  </figure>
+                </a>
+            </div>
+        </div>
+
+        <!-- Third Row of Pizzas -->
+        <div class="pizza-row">            
+            <div class="pizza-item">
+                <!-- Link to Mushroom Pizza -->
+                <a href="form.html?pizza=cheese">
+                  <figure>
+                    <!-- Image of Mushroom Pizza -->
+                    <img src="./new_mushroom.jpeg" alt="Cheese Pizza">
+                    <!-- Caption for Mushroom Pizza -->
+                    <figcaption>
+                      <span class="pizza-name">Mushroom PIZZA</span>
+                      <span class="pizza-price">$9.99</span>
+                    </figcaption>
+                  </figure>
+                </a>
+            </div>
+            
+            <div class="pizza-item">
+                <!-- Link to Bacon Pizza -->
+                <a href="form.html?pizza=veggie">
+                  <figure>
+                    <!-- Image of Bacon Pizza -->
+                    <img src="./new_bacon.jpg" alt="Bacon Pizza" onclick="showEnlargedPizza('./veggie_pizza.jpg')">
+                    <!-- Caption for Bacon Pizza -->
+                    <figcaption>
+                      <span class="pizza-name">Bacon PIZZA</span>
+                      <span class="pizza-price">$10.99</span>
+                    </figcaption>
+                  </figure>
+                </a>
+            </div>
+            
+            <div class="pizza-item">
+                <!-- Link to Seafood Pizza -->
+                <a href="form.html?pizza=pineapple">
+                  <figure>
+                    <!-- Image of Seafood Pizza -->
+                    <img src="./seafood_pizza.jpg" alt="Seafood Pizza">
+                    <!-- Caption for Seafood Pizza -->
+                    <figcaption>
+                      <span class="pizza-name">Seafood PIZZA</span>
+                      <span class="pizza-price">$11.99</span>
+                    </figcaption>
+                  </figure>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

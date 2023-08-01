@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2PmvXkuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Heading -->
+    <h1>Order Your Pizza</h1>
+    
+    <!-- Order Form -->
+    <form action="order_confirmation.html" method="POST">
+        <!-- Personal Information Section -->
+        <label for="name">*Enter your Name:</label>
+        <input type="text" id="name" name="name" placeholder="First name" required>
+        <input type="text" id="lastname" name="lastname" placeholder="Last name" required>
+        <br>
+        <label for="email">*Enter your Email address:</label>
+        <input type="email" id= "email" name="email" placeholder="xyz@email.com" required>
+        <br>
+        <label for="phone">*Enter your Phone number:</label>
+        <div class="phone-input">
+            <select name="country_code" id="country_code" required>
+                <option value="">Select Country Code</option>
+                <option value="+1">+1 (US/Canada)</option>
+                <option value="+91">+91 (India)</option>
+                <option value="+44">+44 (UK)</option>
+                <option value="+52">+52 (Mexico)</option>
+                <option value="+7">+7 (Russia)</option>
+            </select>
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required>
+        </div>
+        <br>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required>
+        <br>
+        
+        <!-- Coupon Code Section -->
+        <label>Add Coupon Code?</label>
+        <div class="coupon-option">
+            <input type="radio" name="add_coupon" value="yes" onclick="toggleCouponCode(true)"> Yes
+            <input type="radio" name="add_coupon" value="no" onclick="toggleCouponCode(false)" checked> No
+        </div>
+        <br>
+        <label for="coupon_code">Coupon Code:</label>
+        <input type="text" id="coupon_code" name="coupon_code" disabled>
+        <br>
+
+        <!-- Payment Information Section -->
+        <h2>Payment Information</h2>
+        <label for="cardholder">*Cardholder Name:</label>
+        <input type="text" id="cardholder" name="cardholder" placeholder="Cardholder Name" required>
+        <br>
+        <label for="card_number">*Card Number:</label>
+        <input type="text" id="card_number" name="card_number" placeholder="1234 5678 9012 3456" required>
+        <br>
+        <label for="expiry">*Expiry Date:</label>
+        <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+        <br>
+        <label for="cvv">*CVV:</label>
+        <input type="text" id="cvv" name="cvv" placeholder="123" required>
+
+        <!-- Price Details Section -->
+        <p>Pizza Price: $<span id="pizza-price">10</span></p>
+        <p>Fries Price: $<span id="fries-price">0</span></p>
+        <button onclick="addFries()">Add Fries</button>
+        <p>Cold Drink Price: $<span id="cold-drink-price">0</span></p>
+        <button onclick="addColdDrink()">Add Cold Drink</button>
+        <p>Total Price: $<span id="total-price">10</span></p>
+
+        <!-- Policy Section -->
+        <div class="policy">
+            <input type="checkbox" id="mails" name="mails" value="mails">
+            <label for="mails">You agree to receive our mails of our trending offers</label>
+            <br>
+            <input type="checkbox" id="terms" name="terms" value="terms">
+            <label for="terms">By clicking this you have accepted the terms and conditions of our company</label>
+        </div>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Place Order">
+    </form> 
+</body>
+</html>
